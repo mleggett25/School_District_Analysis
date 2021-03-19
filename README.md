@@ -189,3 +189,48 @@ New Reading Scores by Grade
 !
 
 We can see from the tables that the only affect the replacement of the Thomas High School ninth graders have is that the NaN is visually presented for their scores.
+
+### Scores by School Spending
+To show the affects of replacing the ninth graders' math and reading scores by school spending, I first established spending bins and group names, and categorized spending based on the bins.
+
+```
+spending_bins = [0, 585, 630, 645, 675]
+group_names = ["<$584", "$585-629", "$630-644", "$645-675"]
+per_school_summary_df["Spending Ranges (Per Student)"] = pd.cut(per_school_capita, spending_bins, labels=group_names)
+```
+
+I then calculated the averages of the average score and percentage passing columns, grouping them by the spending ranges.
+
+```
+spending_math_scores = per_school_summary_df.groupby(["Spending Ranges (Per Student)"]).mean()["Average Math Score"]
+spending_reading_scores = per_school_summary_df.groupby(["Spending Ranges (Per Student)"]).mean()["Average Reading Score"]
+spending_passing_math = per_school_summary_df.groupby(["Spending Ranges (Per Student)"]).mean()["% Passing Math"]
+spending_passing_reading = per_school_summary_df.groupby(["Spending Ranges (Per Student)"]).mean()["% Passing Reading"]
+overall_passing_spending = per_school_summary_df.groupby(["Spending Ranges (Per Student)"]).mean()["% Overall Passing"]
+```
+
+I finally created the spending summary data frame.
+
+```
+spending_summary_df = pd.DataFrame({
+          "Average Math Score" : spending_math_scores,
+          "Average Reading Score": spending_reading_scores,
+          "% Passing Math": spending_passing_math,
+          "% Passing Reading": spending_passing_reading,
+          "% Overall Passing": overall_passing_spending})
+```
+
+With some formatting, the output produced the following tables:
+
+Original Spending Summary
+
+!
+
+New Spending Summary
+
+!
+
+Similarly to what we saw in the District Summary, the Spending Summary was not significantly affected with the removal of the Thomas High School ninth graders. The only differences were in the $630-644 spending range by a couple decimal points.
+
+### Scores by School Size
+
