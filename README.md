@@ -314,7 +314,7 @@ Similarly to what we have seen previously, there was School Type Summary was not
 ## School District Analysis Summary
 Removing the Thomas High School ninth graders affected the School District Analysis in four major ways:
 
-1. hi
+1. 
 
 2. Sorting by overall passing percentages, Thomas High School jumped from the eighth highest overall passing percentage to the second highest overall passing percentage, though only marginally compared to four other schools who also had a 90% overall passing percentage.
 
