@@ -233,4 +233,44 @@ New Spending Summary
 Similarly to what we saw in the District Summary, the Spending Summary was not significantly affected with the removal of the Thomas High School ninth graders. The only differences were in the $630-644 spending range by a couple decimal points.
 
 ### Scores by School Size
+To show the affects of replacing the ninth graders' math and reading scores by school size, I first established size bins and group names, and categorized sizes based on the bins.
+
+```
+size_bins = [0, 1000, 2000, 5000]
+group_names = ["Small (<1000)", "Medium (1000-2000)", "Large (2000-5000)"]
+per_school_summary_df["School Size"] = pd.cut(per_school_summary_df["Total Students"], size_bins, labels=group_names)
+```
+I then calculated the averages of the average score and percentage passing columns, grouping them by the school size.
+
+```
+size_math_scores = per_school_summary_df.groupby(["School Size"]).mean()["Average Math Score"]
+size_reading_scores = per_school_summary_df.groupby(["School Size"]).mean()["Average Reading Score"]
+size_passing_math = per_school_summary_df.groupby(["School Size"]).mean()["% Passing Math"]
+size_passing_reading = per_school_summary_df.groupby(["School Size"]).mean()["% Passing Reading"]
+size_overall_passing = per_school_summary_df.groupby(["School Size"]).mean()["% Overall Passing"]
+```
+I finally created the size summary data frame.
+
+```
+size_summary_df = pd.DataFrame({
+          "Average Math Score" : size_math_scores,
+          "Average Reading Score": size_reading_scores,
+          "% Passing Math": size_passing_math,
+          "% Passing Reading": size_passing_reading,
+          "% Overall Passing": size_overall_passing})
+```
+
+With some formatting, the output produced the following tables:
+
+Original Size Summary
+
+!
+
+New Size Summary
+
+!
+
+Similarly to what we saw in the District Summary and Spending Summary, the Size Summary was not significantly affected with the removal of the Thomas High School ninth graders. The only differences were in the Medium (1000-2000) size by a couple decimal points.
+
+### Scores by School Type
 
