@@ -73,7 +73,7 @@ I then recalculated the series in the data frame with the new total student coun
 As we can see from the tables, the district summary was not significantly affected with the removal of the Thomas High School ninth graders. If we take the unrounded math passing percentage, for example, the difference between the original and new District Summary is by a couple decimal points: 74.76 for the original and 74.98 for the new District Summary. Since we only removed a small portion of the total student population (461 Thomas High School ninth graders out of 39170 total students), we can see why there would be no significant change between the original and new District Summaries.
 
 ### School Summary
-To create the School Summary, I created various series to form the columns and then combined them into a data frame.
+To produce the original School Summary, I created various series to form the columns and then combined them into a data frame.
 
 ```
 per_school_types = school_data_df.set_index(["school_name"])["type"]
@@ -116,3 +116,16 @@ per_school_summary_df["Per Student Budget"] = per_school_summary_df["Per Student
 
 The output from running the code produces the following data frame:
 
+!
+
+With the grades of the Thomas High School ninth graders already replaced with NaNs, I calculated the total number of tenth to twelfth graders at Thomas High School.
+
+```
+tenth_to_twelfth_THS = school_data_complete_df[(school_data_complete_df["school_name"] == "Thomas High School") & (school_data_complete_df["grade"] != "9th")]
+```
+
+I then recalculated the series in the data frame with the tenth to twelfth graders count and produced the following data frame:
+
+!
+
+As we can see from the tables, there is a significant difference between the passing math percentage, the passing reading percentage, and the overall passing percentage for Thomas High School between the original and new School Summaries.
