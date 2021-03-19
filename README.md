@@ -312,5 +312,6 @@ Similarly to what we have seen previously, there was School Type Summary was not
 - The scores by grade, spending, school size, and school type were not significantly affected with the removal of the Thomas High School ninth graders. Similarly to the District Summary, only a small portion of the total student population was removed and this marginally affected the categories that included ninth graders and Thomas High School.
 
 ## School District Analysis Summary
+
 Removing the Thomas High School ninth graders affected the school district analysis in four major ways:
 - 
