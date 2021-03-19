@@ -116,7 +116,7 @@ per_school_summary_df["Per Student Budget"] = per_school_summary_df["Per Student
 
 The output from running the code produces the following data frame:
 
-!
+![Original School Summary](./Resources/original_school_summary.PNG)
 
 With the grades of the Thomas High School ninth graders already replaced with NaNs, I calculated the total number of tenth to twelfth graders at Thomas High School.
 
@@ -126,7 +126,7 @@ tenth_to_twelfth_THS = school_data_complete_df[(school_data_complete_df["school_
 
 I then recalculated the series in the data frame with the tenth to twelfth graders count and produced the following data frame:
 
-!
+![New School Summary](./Resources/new_school_summary.PNG)
 
 As we can see from the tables, there is a significant difference between the passing math percentage, the passing reading percentage, and the overall passing percentage for Thomas High School between the original and new School Summaries, with about a 40% increase in all the percentages.
 
