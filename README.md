@@ -70,7 +70,7 @@ I then recalculated the series in the data frame with the new total student coun
 
 !
 
-As we can see from the tables, the district summary was not significantly affected with the removal of the Thomas High School ninth graders. If we take the unrounded math passing percentage, for example, the difference between the original and new District Summary is by a couple decimal points: 74.76 for the original and 74.98 for the new District Summary. Since we only removed a small portion of the total student population (461 Thomas High School ninth graders out of 39170 total students), we can see why there would be no significant change between the original and new District Summaries.
+As we can see from the tables, the district summary was not significantly affected with the removal of the Thomas High School ninth graders. If we take the unrounded math passing percentage, for example, the difference between the original and new District Summary is by a couple decimal points: 74.76 for the original and 74.98 for the new District Summary.
 
 ### School Summary
 To produce the original School Summary, I created various series to form the columns and then combined them into a data frame.
@@ -128,7 +128,7 @@ I then recalculated the series in the data frame with the tenth to twelfth grade
 
 !
 
-As we can see from the tables, there is a significant difference between the passing math percentage, the passing reading percentage, and the overall passing percentage for Thomas High School between the original and new School Summaries, with about a 40% increase in all the percentages. Relative to the performance of the other 14 schools, Thomas High School jumps from the eighth highest overall passing percentage to the second highest overall passing percentage, though only marginally compared to four other schools who also had a 90% overall passing percentage.
+As we can see from the tables, there is a significant difference between the passing math percentage, the passing reading percentage, and the overall passing percentage for Thomas High School between the original and new School Summaries, with about a 40% increase in all the percentages.
 
 ### Scores By Grade
 To show the affects of replacing the ninth graders' math and reading scores by grade, I first created a series of scores by grade level.
@@ -307,4 +307,9 @@ New School Type Summary
 Similarly to what we have seen previously, there was School Type Summary was not significantly affected with the removal of the Thomas High School ninth graders. The only differences were in the Charter School Type by a couple decimal points.
 
 ### Summary of Results
-- d
+- The District Summary was not significantly affected with the removal of the Thomas High School ninth graders. Since we only removed a small portion of the total student population (461 Thomas High School ninth graders out of 39170 total students), we can see why there would be no significant change between the original and new District Summaries.
+- The School Summary was significantly affected with the removal of the Thomas High School ninth graders. Relative to the performance of the other 14 schools, Thomas High School jumps from the eighth highest overall passing percentage to the second highest overall passing percentage, though only marginally compared to four other schools who also had a 90% overall passing percentage.
+- The scores by grade, spending, school size, and school type were not significantly affected with the removal of the Thomas High School ninth graders. Similarly to the District Summary, only a small portion of the total student population was removed and this marginally affected the categories that included ninth graders and Thomas High School.
+
+## School District Analysis Summary
+
