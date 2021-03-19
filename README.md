@@ -50,7 +50,7 @@ district_summary_df
 
 The output from running the code produces the following data frame:
 
-!
+![Original District Summary](./Resources/original_district_summary.PNG)
 
 I then had to replace the math and reading scores for Thomas High School ninth graders with NaNs, which required that I create a new District Summary.
 
