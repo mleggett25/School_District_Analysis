@@ -130,5 +130,62 @@ I then recalculated the series in the data frame with the tenth to twelfth grade
 
 As we can see from the tables, there is a significant difference between the passing math percentage, the passing reading percentage, and the overall passing percentage for Thomas High School between the original and new School Summaries, with about a 40% increase in all the percentages. Relative to the performance of the other 14 schools, Thomas High School jumps from the eighth highest overall passing percentage to the second highest overall passing percentage, though only marginally compared to four other schools who also had a 90% overall passing percentage.
 
-### Affects By Grade
-To show the affects by grade, 
+### Scores By Grade
+To show the affects of replacing the ninth graders' math and reading scores by grade, I first created a series of scores by grade level.
+
+```
+ninth_grade_math_scores = ninth_graders.groupby(["school_name"]).mean()["math_score"]
+tenth_grade_math_scores = tenth_graders.groupby(["school_name"]).mean()["math_score"]
+eleventh_grade_math_scores = eleventh_graders.groupby(["school_name"]).mean()["math_score"]
+twelfth_grade_math_scores = twelfth_graders.groupby(["school_name"]).mean()["math_score"]
+```
+
+I then grouped each series by the school name for the average math and reading scores.
+
+```
+ninth_grade_math_scores = ninth_graders.groupby(["school_name"]).mean()["math_score"]
+tenth_grade_math_scores = tenth_graders.groupby(["school_name"]).mean()["math_score"]
+eleventh_grade_math_scores = eleventh_graders.groupby(["school_name"]).mean()["math_score"]
+twelfth_grade_math_scores = twelfth_graders.groupby(["school_name"]).mean()["math_score"]
+
+ninth_grade_reading_scores = ninth_graders.groupby(["school_name"]).mean()["reading_score"]
+tenth_grade_reading_scores = tenth_graders.groupby(["school_name"]).mean()["reading_score"]
+eleventh_grade_reading_scores = eleventh_graders.groupby(["school_name"]).mean()["reading_score"]
+twelfth_grade_reading_scores = twelfth_graders.groupby(["school_name"]).mean()["reading_score"]
+```
+
+I combined each series for the average math and reading scores by school into two data frames.
+
+```
+math_scores_by_grade = pd.DataFrame({
+               "9th": ninth_grade_math_scores,
+               "10th": tenth_grade_math_scores,
+               "11th": eleventh_grade_math_scores,
+               "12th": twelfth_grade_math_scores})
+
+reading_scores_by_grade = pd.DataFrame({
+              "9th": ninth_grade_reading_scores,
+              "10th": tenth_grade_reading_scores,
+              "11th": eleventh_grade_reading_scores,
+              "12th": twelfth_grade_reading_scores})
+```
+
+With some formatting, the output of the script produced the following tables:
+
+Original Math Scores by Grade
+
+!
+
+Original Reading Scores by Grade
+
+!
+
+New Math Scores by Grade
+
+!
+
+New Reading Scores by Grade
+
+!
+
+We can see from the tables that the only affect the replacement of the Thomas High School ninth graders have is that the NaN is visually presented for their scores.
