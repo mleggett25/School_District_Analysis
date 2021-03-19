@@ -174,19 +174,19 @@ With some formatting, the output of the script produced the following tables:
 
 Original Math Scores by Grade
 
-!
+![Original Math Scores](./Resources/original_math_scores_by_grade.PNG)
 
 Original Reading Scores by Grade
 
-!
+![Original Reading Scores](./Resources/original_reading_scores_by_grade.PNG)
 
 New Math Scores by Grade
 
-!
+![New Math Scores](./Resources/new_math_scores_by_grade.PNG)
 
 New Reading Scores by Grade
 
-!
+![New Reading Scores](./Resources/new_reading_scores_by_grade.PNG)
 
 We can see from the tables that the only affect the replacement of the Thomas High School ninth graders have is that the NaN is visually presented for their scores.
 
