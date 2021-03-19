@@ -70,7 +70,7 @@ I then recalculated the series in the data frame with the new total student coun
 
 !
 
-As we can see from the tables, the district summary was not significantly affected with the removal of the Thomas High School ninth graders.
+As we can see from the tables, the district summary was not significantly affected with the removal of the Thomas High School ninth graders. If we take the unrounded math passing percentage, for example, the difference between the original and new District Summary is by a couple decimal points: 74.76 for the original and 74.98 for the new District Summary. Since we only removed a small portion of the total student population (461 Thomas High School ninth graders out of 39170 total students), we can see why there would be no significant change between the original and new District Summaries.
 
 ### School Summary
 To create the School Summary, I created various series to form the columns and then combined them into a data frame.
