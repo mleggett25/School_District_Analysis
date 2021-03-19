@@ -304,7 +304,7 @@ New School Type Summary
 
 ![New Type Summary](./Resources/new_type_summary.PNG)
 
-Similarly to what we have seen previously, there was School Type Summary was not significantly affected with the removal of the Thomas High School ninth graders. The only differences were in the Charter School Type by a couple decimal points.
+Similarly to what we have seen previously, the School Type Summary was not significantly affected with the removal of the Thomas High School ninth graders. The only differences were in the Charter School Type by a couple decimal points.
 
 ### Summary of Results
 - The District Summary was not significantly affected with the removal of the Thomas High School ninth graders. Since we only removed a small portion of the total student population (461 Thomas High School ninth graders out of 39170 total students), we can see why there would be no significant change between the original and new District Summaries.
