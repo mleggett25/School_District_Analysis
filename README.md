@@ -39,6 +39,7 @@ district_summary_df
 ```
 
 The output from running the code produces the following data frame:
+
 ![Original District Summary](./Resources/original_district_summary.PNG)
 
 ### School Summary
