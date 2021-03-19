@@ -39,7 +39,7 @@ district_summary_df
 ```
 
 The output from running the code produces the following data frame:
-![Original District Summary](./Resources/original_district_summary.png)
+![Original District Summary](./Resources/original_district_summary.PNG)
 
 ### School Summary
 To create the School Summary, I created various series to form the columns and then combined them into a data frame.
