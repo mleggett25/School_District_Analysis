@@ -312,6 +312,6 @@ Similarly to what we have seen previously, there was School Type Summary was not
 - The scores by grade, spending, school size, and school type were not significantly affected with the removal of the Thomas High School ninth graders. Similarly to the District Summary, only a small portion of the total student population was removed and this marginally affected the categories that included ninth graders and Thomas High School.
 
 ## School District Analysis Summary
-
-Removing the Thomas High School ninth graders affected the school district analysis in four major ways:
+Removing the Thomas High School ninth graders affected the School District Analysis in four major ways:
+- The School Summary was the most affected table summary. When the Thomas High School ninth graders were removed, the overall passing percentage jumped from 65% to 90%. I would suggest that the school board review the evidence they found of academic dishonesty in the reading and math grades for Thomas High School ninth graders. It seems unlikely that the passing percentages would be so low for the ninth graders if there were attempts to increase their scores.
 - 
