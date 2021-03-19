@@ -68,7 +68,7 @@ new_student_count = student_count - student_no_grades
 
 I then recalculated the series in the data frame with the new total student count and produced the following data frame:
 
-!
+![New District Summary](./Resources/new_district_summary.PNG)
 
 As we can see from the tables, the district summary was not significantly affected with the removal of the Thomas High School ninth graders. If we take the unrounded math passing percentage, for example, the difference between the original and new District Summary is by a couple decimal points: 74.76 for the original and 74.98 for the new District Summary.
 
