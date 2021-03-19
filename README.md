@@ -224,11 +224,11 @@ With some formatting, the output produced the following tables:
 
 Original Spending Summary
 
-!
+![Original Spending Summary](./Resources/original_spending_summary.PNG)
 
 New Spending Summary
 
-!
+![New Spending Summary](./Resources/new_spending_summary.PNG)
 
 Similarly to what we saw in the District Summary, the Spending Summary was not significantly affected with the removal of the Thomas High School ninth graders. The only differences were in the $630-644 spending range by a couple decimal points.
 
@@ -264,11 +264,11 @@ With some formatting, the output produced the following tables:
 
 Original School Size Summary
 
-!
+![Original Size Summary](./Resources/original_size_summary.PNG)
 
 New School Size Summary
 
-!
+![New Size Summary](./Resources/new_size_summary.PNG)
 
 Similarly to what we saw in the District Summary and Spending Summary, the School Size Summary was not significantly affected with the removal of the Thomas High School ninth graders. The only differences were in the Medium (1000-2000) size by a couple decimal points.
 
@@ -298,11 +298,11 @@ With some formatting, the output produced the following tables:
 
 Original School Type Summary
 
-!
+![Original Type Summary](./Resources/original_type_summary.PNG)
 
 New School Type Summary
 
-!
+![New Type Summary](./Resources/new_type_summary.PNG)
 
 Similarly to what we have seen previously, there was School Type Summary was not significantly affected with the removal of the Thomas High School ninth graders. The only differences were in the Charter School Type by a couple decimal points.
 
