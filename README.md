@@ -249,7 +249,7 @@ size_passing_math = per_school_summary_df.groupby(["School Size"]).mean()["% Pas
 size_passing_reading = per_school_summary_df.groupby(["School Size"]).mean()["% Passing Reading"]
 size_overall_passing = per_school_summary_df.groupby(["School Size"]).mean()["% Overall Passing"]
 ```
-I finally created the size summary data frame.
+I finally created the school size summary data frame.
 
 ```
 size_summary_df = pd.DataFrame({
@@ -262,15 +262,49 @@ size_summary_df = pd.DataFrame({
 
 With some formatting, the output produced the following tables:
 
-Original Size Summary
+Original School Size Summary
 
 !
 
-New Size Summary
+New School Size Summary
 
 !
 
-Similarly to what we saw in the District Summary and Spending Summary, the Size Summary was not significantly affected with the removal of the Thomas High School ninth graders. The only differences were in the Medium (1000-2000) size by a couple decimal points.
+Similarly to what we saw in the District Summary and Spending Summary, the School Size Summary was not significantly affected with the removal of the Thomas High School ninth graders. The only differences were in the Medium (1000-2000) size by a couple decimal points.
 
 ### Scores by School Type
+To show the affects of replacing the ninth graders' math and reading scores by school type, I first calculated the averages of the average score and percentage passing columns, grouping them by the school type.
 
+```
+type_math_scores = per_school_summary_df.groupby(["School Type"]).mean()["Average Math Score"]
+type_reading_scores = per_school_summary_df.groupby(["School Type"]).mean()["Average Reading Score"]
+type_passing_math = per_school_summary_df.groupby(["School Type"]).mean()["% Passing Math"]
+type_passing_reading = per_school_summary_df.groupby(["School Type"]).mean()["% Passing Reading"]
+type_overall_passing = per_school_summary_df.groupby(["School Type"]).mean()["% Overall Passing"]
+```
+
+I then created the school type data frame.
+
+```
+type_summary_df = pd.DataFrame({
+          "Average Math Score" : type_math_scores,
+          "Average Reading Score": type_reading_scores,
+          "% Passing Math": type_passing_math,
+          "% Passing Reading": type_passing_reading,
+          "% Overall Passing": type_overall_passing})
+```
+
+With some formatting, the output produced the following tables:
+
+Original School Type Summary
+
+!
+
+New School Type Summary
+
+!
+
+Similarly to what we have seen previously, there was School Type Summary was not significantly affected with the removal of the Thomas High School ninth graders. The only differences were in the Charter School Type by a couple decimal points.
+
+### Summary of Results
+- d
