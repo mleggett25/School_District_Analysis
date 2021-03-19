@@ -8,7 +8,38 @@ The purpose of this school district analysis was to provide insight into the per
 ## Results
 
 ### District Summary
-To create the District Summary, I created various series to form the columns and then combined them into a data frame.
+To produce the original Disctrict Summary, I created various series to form the columns and then combined them into a data frame.
+ 
+ ```
+school_count = len(school_data_complete_df["school_name"].unique())
+student_count = school_data_complete_df["Student ID"].count()
+total_budget = school_data_df["budget"].sum()
+average_reading_score = school_data_complete_df["reading_score"].mean()
+average_math_score = school_data_complete_df["math_score"].mean()
+average_reading_score = school_data_complete_df["reading_score"].mean()
+passing_math_count = passing_math["student_name"].count()
+passing_math_count = school_data_complete_df[(school_data_complete_df["math_score"] >= 70)].count()["student_name"]
+passing_reading_count = passing_reading["student_name"].count()
+passing_reading_count = school_data_complete_df[(school_data_complete_df["reading_score"] >= 70)].count()["student_name"]
+passing_math_reading = school_data_complete_df[(school_data_complete_df["math_score"] >= 70) & (school_data_complete_df["reading_score"] >= 70)]
+overall_passing_math_reading_count = passing_math_reading["student_name"].count()
+overall_passing_percentage = overall_passing_math_reading_count / student_count * 100
+
+district_summary_df = pd.DataFrame(
+          [{"Total Schools": school_count,
+          "Total Students": student_count,
+          "Total Budget": total_budget,
+          "Average Math Score": average_math_score,
+          "Average Reading Score": average_reading_score,
+          "% Passing Math": passing_math_percentage,
+         "% Passing Reading": passing_reading_percentage,
+        "% Overall Passing": overall_passing_percentage}])
+district_summary_df
+
+```
+
+### School Summary
+To create the School Summary, I created various series to form the columns and then combined them into a data frame.
 
 ```
 # Determine the School Type
@@ -70,3 +101,4 @@ per_school_summary_df["Total School Budget"] = per_school_summary_df["Total Scho
 per_school_summary_df["Per Student Budget"] = per_school_summary_df["Per Student Budget"].map("${:,.2f}".format)
 ```
 
+The output from running the code
