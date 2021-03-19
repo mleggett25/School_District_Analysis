@@ -308,10 +308,12 @@ Similarly to what we have seen previously, there was School Type Summary was not
 
 ### Summary of Results
 - The District Summary was not significantly affected with the removal of the Thomas High School ninth graders. Since we only removed a small portion of the total student population (461 Thomas High School ninth graders out of 39170 total students), we can see why there would be no significant change between the original and new District Summaries.
-- The School Summary was significantly affected with the removal of the Thomas High School ninth graders. Relative to the performance of the other 14 schools, Thomas High School jumps from the eighth highest overall passing percentage to the second highest overall passing percentage, though only marginally compared to four other schools who also had a 90% overall passing percentage.
+- The School Summary was significantly affected with the removal of the Thomas High School ninth graders. Relative to the performance of the other 14 schools, Thomas High School jumps from the eighth highest overall passing percentage to the second highest overall passing percentage.
 - The scores by grade, spending, school size, and school type were not significantly affected with the removal of the Thomas High School ninth graders. Similarly to the District Summary, only a small portion of the total student population was removed and this marginally affected the categories that included ninth graders and Thomas High School.
 
 ## School District Analysis Summary
 Removing the Thomas High School ninth graders affected the School District Analysis in four major ways:
-- The School Summary was the most affected table summary. When the Thomas High School ninth graders were removed, the overall passing percentage jumped from 65% to 90%. I would suggest that the school board review the evidence they found of academic dishonesty in the reading and math grades for Thomas High School ninth graders. It seems unlikely that the passing percentages would be so low for the ninth graders if there were attempts to increase their scores.
-- 
+1. 
+2. Sorting by overall passing percentages, Thomas High School jumped from the eighth highest overall passing percentage to the second highest overall passing percentage, though only marginally compared to four other schools who also had a 90% overall passing percentage.
+3. While the results of the scores by grade remain mostly the same, we can clearly see the replacement of the Thomas High School ninth graders scores with the NaN.
+4. In the School Summary table for Thomas High School, the passing math percentage jumped from 67% to 93%; the passing reading percentage jumped from 70% to 97%; and the overall passing percentage jumped from 65% to 90%. I would suggest that the school board review the evidence they found of academic dishonesty in the reading and math grades for Thomas High School ninth graders. It seems unlikely that the passing percentages would be so low for the ninth graders if there were attempts to increase their scores.
