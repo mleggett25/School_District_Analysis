@@ -34,56 +34,65 @@ district_summary_df = pd.DataFrame(
           "% Passing Math": passing_math_percentage,
          "% Passing Reading": passing_reading_percentage,
         "% Overall Passing": overall_passing_percentage}])
-district_summary_df
+```
 
+I then formatted the columns so that the Average Math Score and Average Reading Score rounded to one decimal place, and the % Passing Math, % Passing Reading, and % Overall Passing columns had no decimals.
+
+```
+district_summary_df["Average Math Score"] = district_summary_df["Average Math Score"].map("{:.1f}".format)
+district_summary_df["Average Reading Score"] = district_summary_df["Average Reading Score"].map("{:.1f}".format)
+district_summary_df["% Passing Math"] = district_summary_df["% Passing Math"].map("{:.0f}".format)
+district_summary_df["% Passing Reading"] = district_summary_df["% Passing Reading"].map("{:.0f}".format)
+district_summary_df["% Overall Passing"] = district_summary_df["% Overall Passing"].map("{:.0f}".format)
+
+district_summary_df
 ```
 
 The output from running the code produces the following data frame:
 
-![Original District Summary](./Resources/original_district_summary.PNG)
+!
+
+I then had to replace the math and reading scores for Thomas High School ninth graders with NaNs, which required that I create a new District Summary.
+
+```
+student_data_df.loc[(student_data_df["grade"] == "9th") & (student_data_df["school_name"] == "Thomas High School"), "reading_score"] = np.nan
+student_data_df.loc[(student_data_df["grade"] == "9th") & (student_data_df["school_name"] == "Thomas High School"), "math_score"] = np.nan
+```
+
+I calculated the number of students that are Thomas High School ninth graders with NaNs and subtracted that number from the student count to create a new student count.
+
+```
+student_no_grades = len(student_data_df.loc[(student_data_df["grade"] == "9th") & (student_data_df["school_name"] == "Thomas High School")])
+new_student_count = student_count - student_no_grades
+```
+
+I then recalculated the series in the data frame with the new total student count and produced the following data frame:
+
+!
+
+As we can see from the tables, the district summary was not significantly affected with the removal of the Thomas High School ninth graders.
 
 ### School Summary
 To create the School Summary, I created various series to form the columns and then combined them into a data frame.
 
 ```
-# Determine the School Type
 per_school_types = school_data_df.set_index(["school_name"])["type"]
-
-# Calculate the total student count.
 per_school_counts = school_data_complete_df["school_name"].value_counts()
-
-# Calculate the total school budget and per capita spending
 per_school_budget = school_data_complete_df.groupby(["school_name"]).mean()["budget"]
-# Calculate the per capita spending.
 per_school_capita = per_school_budget / per_school_counts
-
-# Calculate the average test scores.
 per_school_math = school_data_complete_df.groupby(["school_name"]).mean()["math_score"]
 per_school_reading = school_data_complete_df.groupby(["school_name"]).mean()["reading_score"]
-
-# Calculate the passing scores by creating a filtered DataFrame.
 per_school_passing_math = school_data_complete_df[(school_data_complete_df["math_score"] >= 70)]
 per_school_passing_reading = school_data_complete_df[(school_data_complete_df["reading_score"] >= 70)]
-
-# Calculate the number of students passing math and passing reading by school.
 per_school_passing_math = per_school_passing_math.groupby(["school_name"]).count()["student_name"]
 per_school_passing_reading = per_school_passing_reading.groupby(["school_name"]).count()["student_name"]
-
-# Calculate the percentage of passing math and reading scores per school.
 per_school_passing_math = per_school_passing_math / per_school_counts * 100
 per_school_passing_reading = per_school_passing_reading / per_school_counts * 100
-
-# Calculate the students who passed both reading and math.
 per_passing_math_reading = school_data_complete_df[(school_data_complete_df["reading_score"] >= 70)
                                                & (school_data_complete_df["math_score"] >= 70)]
-
-# Calculate the number of students passing math and passing reading by school.
 per_passing_math_reading = per_passing_math_reading.groupby(["school_name"]).count()["student_name"]
-
-# Calculate the percentage of passing math and reading scores per school.
 per_overall_passing_percentage = per_passing_math_reading / per_school_counts * 100
 
-# Create the DataFrame
 per_school_summary_df = pd.DataFrame({
     "School Type": per_school_types,
     "Total Students": per_school_counts,
@@ -105,4 +114,5 @@ per_school_summary_df["Total School Budget"] = per_school_summary_df["Total Scho
 per_school_summary_df["Per Student Budget"] = per_school_summary_df["Per Student Budget"].map("${:,.2f}".format)
 ```
 
-The output from running the code
+The output from running the code produces the following data frame:
+
